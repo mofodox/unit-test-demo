@@ -7,7 +7,14 @@ type Listing struct {
 	Price float64
 }
 
-func CalculateCommission(price float64) (commission float64) {
+func CalculateCommission(price float64) float64 {
 	// Returns the commission
 	return price * 0.03
+}
+
+func CalculatePriceAfterCommission(price float64) float64 {
+	commission := CalculateCommission(price)
+	result := price - commission
+
+	return result
 }
