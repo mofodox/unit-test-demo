@@ -41,13 +41,13 @@ func TestCalculatePriceAfterCommission(t *testing.T) {
 
 /********* Table Driven Tests *********/
 
-type TestMultipleListingPrice struct {
+type TestCalculateMultipleListingPricesAfterCommission struct {
 	listingStruct                listing.Listing
 	expectedPriceAfterCommission float64
 }
 
 func TestTDT(t *testing.T) {
-	listingCases := []TestMultipleListingPrice{
+	listingCases := []TestCalculateMultipleListingPricesAfterCommission{
 		{
 			listingStruct: listing.Listing{
 				Id:    "1",
